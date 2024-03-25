@@ -21,7 +21,14 @@
 		63CAD9402BB1533A007E0B69 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 63CAD93E2BB1533A007E0B69 /* Config.xcconfig */; };
 		63CAD9432BB1536D007E0B69 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9422BB1536D007E0B69 /* Feature.swift */; };
 		63CAD9452BB15373007E0B69 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9442BB15373007E0B69 /* Core.swift */; };
-		63CAD9482BB15381007E0B69 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9472BB15381007E0B69 /* Model.swift */; };
+		63CAD9482BB15381007E0B69 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9472BB15381007E0B69 /* Todo.swift */; };
+		63CAD94D2BB15583007E0B69 /* Keboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD94C2BB15583007E0B69 /* Keboard+Extension.swift */; };
+		63CAD94F2BB155B1007E0B69 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD94E2BB155B1007E0B69 /* UserDefaults+Extension.swift */; };
+		63CAD9512BB155EF007E0B69 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9502BB155EF007E0B69 /* Color+Extension.swift */; };
+		63CAD9532BB15645007E0B69 /* NavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9522BB15645007E0B69 /* NavigationController+Extension.swift */; };
+		63CAD9572BB15734007E0B69 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9562BB15734007E0B69 /* Keys.swift */; };
+		63CAD9592BB157A2007E0B69 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9582BB157A2007E0B69 /* Person.swift */; };
+		63CAD95B2BB157CD007E0B69 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63CAD95A2BB157CD007E0B69 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +63,14 @@
 		63CAD93E2BB1533A007E0B69 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Config.xcconfig; path = ../../../CYC/CYC/Login/Config.xcconfig; sourceTree = "<group>"; };
 		63CAD9422BB1536D007E0B69 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		63CAD9442BB15373007E0B69 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
-		63CAD9472BB15381007E0B69 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		63CAD9472BB15381007E0B69 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		63CAD94C2BB15583007E0B69 /* Keboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keboard+Extension.swift"; sourceTree = "<group>"; };
+		63CAD94E2BB155B1007E0B69 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		63CAD9502BB155EF007E0B69 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		63CAD9522BB15645007E0B69 /* NavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationController+Extension.swift"; sourceTree = "<group>"; };
+		63CAD9562BB15734007E0B69 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		63CAD9582BB157A2007E0B69 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		63CAD95A2BB157CD007E0B69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +127,9 @@
 			children = (
 				63CAD9042BB151C1007E0B69 /* CYC_TCAApp.swift */,
 				63CAD9062BB151C1007E0B69 /* ContentView.swift */,
+				63CAD9562BB15734007E0B69 /* Keys.swift */,
 				63CAD93E2BB1533A007E0B69 /* Config.xcconfig */,
+				63CAD95A2BB157CD007E0B69 /* Info.plist */,
 				63CAD93C2BB15302007E0B69 /* Feature */,
 				63CAD93D2BB15304007E0B69 /* Core */,
 				63CAD93B2BB152FE007E0B69 /* Model */,
@@ -152,7 +168,8 @@
 		63CAD93B2BB152FE007E0B69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				63CAD9472BB15381007E0B69 /* Model.swift */,
+				63CAD9472BB15381007E0B69 /* Todo.swift */,
+				63CAD9582BB157A2007E0B69 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,9 +185,21 @@
 		63CAD93D2BB15304007E0B69 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				63CAD94A2BB15552007E0B69 /* Extension */,
 				63CAD9442BB15373007E0B69 /* Core.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		63CAD94A2BB15552007E0B69 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63CAD94C2BB15583007E0B69 /* Keboard+Extension.swift */,
+				63CAD94E2BB155B1007E0B69 /* UserDefaults+Extension.swift */,
+				63CAD9502BB155EF007E0B69 /* Color+Extension.swift */,
+				63CAD9522BB15645007E0B69 /* NavigationController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CAD95B2BB157CD007E0B69 /* Info.plist in Resources */,
 				63CAD90D2BB151C2007E0B69 /* Preview Assets.xcassets in Resources */,
 				63CAD9402BB1533A007E0B69 /* Config.xcconfig in Resources */,
 				63CAD9092BB151C2007E0B69 /* Assets.xcassets in Resources */,
@@ -316,11 +346,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63CAD9482BB15381007E0B69 /* Model.swift in Sources */,
+				63CAD94D2BB15583007E0B69 /* Keboard+Extension.swift in Sources */,
+				63CAD9482BB15381007E0B69 /* Todo.swift in Sources */,
 				63CAD9432BB1536D007E0B69 /* Feature.swift in Sources */,
 				63CAD9072BB151C1007E0B69 /* ContentView.swift in Sources */,
+				63CAD9592BB157A2007E0B69 /* Person.swift in Sources */,
+				63CAD9532BB15645007E0B69 /* NavigationController+Extension.swift in Sources */,
 				63CAD9452BB15373007E0B69 /* Core.swift in Sources */,
 				63CAD9052BB151C1007E0B69 /* CYC_TCAApp.swift in Sources */,
+				63CAD94F2BB155B1007E0B69 /* UserDefaults+Extension.swift in Sources */,
+				63CAD9512BB155EF007E0B69 /* Color+Extension.swift in Sources */,
+				63CAD9572BB15734007E0B69 /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

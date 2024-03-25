@@ -5,6 +5,8 @@
 //  Created by 강치우 on 3/25/24.
 //
 
+import UserNotifications
+import SwiftData
 import SwiftUI
 
 @main
