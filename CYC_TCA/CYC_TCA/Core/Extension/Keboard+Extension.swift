@@ -10,7 +10,6 @@ import SwiftUI
 // MARK: - 화면 터치시 키보드 내려감
 extension UIApplication {
     func addTapGestureRecognizer() {
-        
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
         
