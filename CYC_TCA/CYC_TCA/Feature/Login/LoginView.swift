@@ -2,56 +2,42 @@
 //  LoginView.swift
 //  CYC_TCA
 //
-//  Created by 강치우 on 3/26/24.
+//  Created by 강치우 on 3/27/24.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct LoginView: View {
-    
-    @ObservedObject private var loginModel = LoginModel.shared
-    @AppStorage("isLoggedIn") var isloggedInVIew: Bool = false
+    @Bindable var store: StoreOf<OnboardingFeature>
     
     var body: some View {
         ZStack {
-            Color.bgColor.ignoresSafeArea(.all)
+            Color.bgColor.ignoresSafeArea()
             
             VStack {
                 Spacer()
                     .frame(height: 100)
                 
-                // MARK: - 중간 온보딩 뷰
                 VStack {
-                    OnboardingTabView()
+                    OnboardingTabView(store: store)
                 }
                 
-                // MARK: - Github 소셜 로그인 버튼
-                Link(destination: loginModel.loginURL ?? URL(string: "")!,
-                     label: {
+                Button {
+                    
+                } label: {
                     Image("githubbutton")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350, height: 50)
-                })
+                }
                 .padding()
-                .onOpenURL(perform: { url in
-                    Task{
-                            let success = await loginModel.handleCodeFromURL(url)
-                            if success{
-                                await loginModel.get_access_token()
-                                isloggedInVIew = true
-                            }
-                        }
-                })
-
+                
                 Text("2023, Check Your Commit all rights reserved.\nPowered by PJ2T2_CYC")
                     .font(.pretendardLight_11)
                     .multilineTextAlignment(.center)
+                
             }
         }
     }
-}
-
-#Preview {
-    LoginView()
 }

@@ -8,31 +8,20 @@
 import SwiftUI
 import SwiftData
 import UserNotifications
+import ComposableArchitecture
 
 @main
 struct CYC_TCAApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    // MARK: - SwiftData 컨테이너
-    var sharedModelContainer: ModelContainer = {
-        do {
-            let schema = Schema([
-                Todo.self,
-            ])
-            let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    static let store = Store(initialState: OnboardingFeature.State()) {
+        OnboardingFeature()
+            ._printChanges()
+    }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
-                
+            LoginView(store: CYC_TCAApp.store)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

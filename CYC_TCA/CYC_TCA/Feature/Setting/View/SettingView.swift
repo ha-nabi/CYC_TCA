@@ -15,7 +15,7 @@ struct SettingView: View {
     @State private var showingAlert = false
     
     var backButton : some View {
-        Button{
+        Button {
             dismiss()
         } label: {
             HStack {
