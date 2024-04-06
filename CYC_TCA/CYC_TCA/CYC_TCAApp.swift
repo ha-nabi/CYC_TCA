@@ -21,7 +21,7 @@ struct CYC_TCAApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView(store: CYC_TCAApp.store)
+            ContentView(store: CYC_TCAApp.store)
         }
     }
 }

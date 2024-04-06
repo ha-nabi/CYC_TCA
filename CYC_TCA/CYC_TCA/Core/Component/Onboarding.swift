@@ -5,36 +5,13 @@
 //  Created by 강치우 on 3/29/24.
 //
 
-import ComposableArchitecture
 import SwiftUI
 
-@Reducer
-struct OnboardingFeature {
-    @ObservableState
-    struct State: Equatable {
-        var currentTab = 0
-    }
-    
-    enum Action: Equatable {
-        case tabChanged(Int)
-    }
-    
-    var body: some ReducerOf<Self> {
-        Reduce { state, action in
-            switch action {
-            case let .tabChanged(input):
-                state.currentTab = input
-                return .none
-            }
-        }
-    }
-}
-
-struct OnboardingTabView: View {
-    @Bindable var store: StoreOf<OnboardingFeature>
+struct Onboarding: View {
+    @State private var tabNumber: Int = 0
     
     var body: some View {
-        TabView(selection: $store.currentTab.sending(\.tabChanged)) {
+        TabView(selection: $tabNumber) {
             VStack {
                 Text("커밋 챌린지 목표를 정해보세요")
                     .font(.pretendardBold_20)

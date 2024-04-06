@@ -22,7 +22,9 @@
 		637380FA2BB28FDC006FD52C /* DLMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637380F92BB28FDC006FD52C /* DLMode.swift */; };
 		637380FC2BB28FF2006FD52C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637380FB2BB28FF2006FD52C /* UIButton.swift */; };
 		637380FE2BB2909D006FD52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637380FD2BB2909D006FD52C /* AppDelegate.swift */; };
-		63AB62EA2BB693EE001DFFFF /* OnboardingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62E92BB693EE001DFFFF /* OnboardingFeature.swift */; };
+		63AB62EA2BB693EE001DFFFF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62E92BB693EE001DFFFF /* Onboarding.swift */; };
+		63AB62ED2BB9C7DB001DFFFF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */; };
+		63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EE2BC1A65F001DFFFF /* User.swift */; };
 		63CAD9052BB151C1007E0B69 /* CYC_TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9042BB151C1007E0B69 /* CYC_TCAApp.swift */; };
 		63CAD9072BB151C1007E0B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9062BB151C1007E0B69 /* ContentView.swift */; };
 		63CAD9092BB151C2007E0B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CAD9082BB151C2007E0B69 /* Assets.xcassets */; };
@@ -89,7 +91,9 @@
 		637380FB2BB28FF2006FD52C /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		637380FD2BB2909D006FD52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		637380FF2BB291EF006FD52C /* CYC-TCA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CYC-TCA-Info.plist"; sourceTree = SOURCE_ROOT; };
-		63AB62E92BB693EE001DFFFF /* OnboardingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFeature.swift; sourceTree = "<group>"; };
+		63AB62E92BB693EE001DFFFF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		63AB62EE2BC1A65F001DFFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		63CAD9012BB151C1007E0B69 /* CYC_TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYC_TCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CAD9042BB151C1007E0B69 /* CYC_TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYC_TCAApp.swift; sourceTree = "<group>"; };
 		63CAD9062BB151C1007E0B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,7 +194,6 @@
 		637380A32BB2850D006FD52C /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				63AB62E82BB693DC001DFFFF /* Onboarding */,
 				63FA82062BB3E91B006C136D /* LoginView.swift */,
 				63FA82082BB3E924006C136D /* LoginFeature.swift */,
 			);
@@ -211,7 +214,6 @@
 			children = (
 				637380F82BB28FCE006FD52C /* Mode */,
 				637380AA2BB285FF006FD52C /* Font */,
-				637380F62BB28F6F006FD52C /* LocalNotificationHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -241,19 +243,21 @@
 			path = Mode;
 			sourceTree = "<group>";
 		};
-		63AB62E82BB693DC001DFFFF /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				63AB62E92BB693EE001DFFFF /* OnboardingFeature.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		63AB62EB2BB6A568001DFFFF /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				637380F62BB28F6F006FD52C /* LocalNotificationHelper.swift */,
+				63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		63AB62F02BC1A7B7001DFFFF /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				63AB62E92BB693EE001DFFFF /* Onboarding.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		63CAD8F82BB151C1007E0B69 = {
@@ -323,6 +327,7 @@
 		63CAD93B2BB152FE007E0B69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				63AB62EE2BC1A65F001DFFFF /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +348,7 @@
 		63CAD93D2BB15304007E0B69 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				63AB62F02BC1A7B7001DFFFF /* Component */,
 				63AB62EB2BB6A568001DFFFF /* Service */,
 				637380A92BB285F3006FD52C /* Helper */,
 				63CAD94A2BB15552007E0B69 /* Extension */,
@@ -522,6 +528,7 @@
 				63FA82112BB3E945006C136D /* CommitFeature.swift in Sources */,
 				63CAD94D2BB15583007E0B69 /* Keboard+Extension.swift in Sources */,
 				63FA820F2BB3E93E006C136D /* CommitView.swift in Sources */,
+				63AB62ED2BB9C7DB001DFFFF /* LoginManager.swift in Sources */,
 				637380FE2BB2909D006FD52C /* AppDelegate.swift in Sources */,
 				63FA82152BB3E957006C136D /* ProgressFeature.swift in Sources */,
 				637380DD2BB28CB2006FD52C /* Spacing+Extension.swift in Sources */,
@@ -536,7 +543,8 @@
 				637380FC2BB28FF2006FD52C /* UIButton.swift in Sources */,
 				637380BE2BB28624006FD52C /* Font+Extension.swift in Sources */,
 				63FA82092BB3E924006C136D /* LoginFeature.swift in Sources */,
-				63AB62EA2BB693EE001DFFFF /* OnboardingFeature.swift in Sources */,
+				63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */,
+				63AB62EA2BB693EE001DFFFF /* Onboarding.swift in Sources */,
 				63CAD9572BB15734007E0B69 /* Keys.swift in Sources */,
 				63FA82072BB3E91B006C136D /* LoginView.swift in Sources */,
 				63FA82172BB3E95E006C136D /* SettingView.swift in Sources */,
