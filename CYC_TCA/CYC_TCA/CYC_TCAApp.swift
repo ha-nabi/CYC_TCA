@@ -14,14 +14,14 @@ import ComposableArchitecture
 struct CYC_TCAApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    static let store = Store(initialState: OnboardingFeature.State()) {
-        OnboardingFeature()
-            ._printChanges()
-    }
+//    static let store = Store(initialState: OnboardingFeature.State()) {
+//        OnboardingFeature()
+//            ._printChanges()
+//    }
     
     var body: some Scene {
         WindowGroup {
-            ContentView(store: CYC_TCAApp.store)
+            ContentView()
         }
     }
 }

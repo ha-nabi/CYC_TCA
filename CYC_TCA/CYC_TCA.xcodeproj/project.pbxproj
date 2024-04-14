@@ -25,6 +25,7 @@
 		63AB62EA2BB693EE001DFFFF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62E92BB693EE001DFFFF /* Onboarding.swift */; };
 		63AB62ED2BB9C7DB001DFFFF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */; };
 		63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EE2BC1A65F001DFFFF /* User.swift */; };
+		63AB62F52BCBA599001DFFFF /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62F42BCBA599001DFFFF /* ProgressBarView.swift */; };
 		63CAD9052BB151C1007E0B69 /* CYC_TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9042BB151C1007E0B69 /* CYC_TCAApp.swift */; };
 		63CAD9072BB151C1007E0B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9062BB151C1007E0B69 /* ContentView.swift */; };
 		63CAD9092BB151C2007E0B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CAD9082BB151C2007E0B69 /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		63AB62E92BB693EE001DFFFF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		63AB62EE2BC1A65F001DFFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		63AB62F42BCBA599001DFFFF /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		63CAD9012BB151C1007E0B69 /* CYC_TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYC_TCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CAD9042BB151C1007E0B69 /* CYC_TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYC_TCAApp.swift; sourceTree = "<group>"; };
 		63CAD9062BB151C1007E0B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				63FA82122BB3E94D006C136D /* ProgressView.swift */,
+				63AB62F42BCBA599001DFFFF /* ProgressBarView.swift */,
 				63FA82142BB3E957006C136D /* ProgressFeature.swift */,
 			);
 			path = Progress;
@@ -541,6 +544,7 @@
 				63CAD94F2BB155B1007E0B69 /* UserDefaults+Extension.swift in Sources */,
 				63CAD9512BB155EF007E0B69 /* Color+Extension.swift in Sources */,
 				637380FC2BB28FF2006FD52C /* UIButton.swift in Sources */,
+				63AB62F52BCBA599001DFFFF /* ProgressBarView.swift in Sources */,
 				637380BE2BB28624006FD52C /* Font+Extension.swift in Sources */,
 				63FA82092BB3E924006C136D /* LoginFeature.swift in Sources */,
 				63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */,
