@@ -2,7 +2,7 @@
 //  Person.swift
 //  CYC_TCA
 //
-//  Created by 강치우 on 3/25/24.
+//  Created by 강치우 on 4/19/24.
 //
 
 import SwiftUI
@@ -17,7 +17,7 @@ struct Person: Identifiable {
 }
 
 var PersonData: [Person] = [
-    Person(name: "Ciu", subtitle: "iOS Developer", image: "angry", color: .ciu, link: "https://github.com/kangciu"),
+    Person(name: "Ciu", subtitle: "iOS Developer", image: "angry", color: .ciu, link: "https://github.com/ha-nabi"),
     Person(name: "MinChae", subtitle: "iOS Developer", image: "kiss_pink", color: .minchae, link: "https://github.com/Hminchae"),
     Person(name: "Minyoung", subtitle: "iOS Developer", image: "beauty", color: .minyoung, link: "https://github.com/Mminy62"),
     Person(name: "MyungHyun", subtitle: "iOS Developer", image: "dizzy", color: .myunhyun, link: "https://github.com/kmh5038"),

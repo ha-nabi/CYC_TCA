@@ -16,7 +16,7 @@ struct MainView: View {
     @Bindable var store: StoreOf<MainFeature>
     
     var body: some View {
-        NavigationStack(path: $store.scope(state: \.path, action: \.path)) {
+        NavigationStack {
             ZStack {
                 Color.bgColor.ignoresSafeArea()
                 
@@ -71,12 +71,8 @@ struct MainView: View {
                     .scrollIndicators(.hidden)
                 }
             }
-        } destination: { store in
-            switch store.state {
-            case .settingView(_):
-                if let store = store.scope(state: \.settingView, action: \.settingView) {
-                    SettingView()
-                }
+            .navigationDestination (item: $store.scope(state: \.setting, action: \.setting)) { settingStore in
+                SettingView(store: settingStore)
             }
         }
     }

@@ -22,6 +22,12 @@
 		637380FA2BB28FDC006FD52C /* DLMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637380F92BB28FDC006FD52C /* DLMode.swift */; };
 		637380FC2BB28FF2006FD52C /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637380FB2BB28FF2006FD52C /* UIButton.swift */; };
 		637380FE2BB2909D006FD52C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637380FD2BB2909D006FD52C /* AppDelegate.swift */; };
+		63931A6D2BD210FF0051DCC1 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63931A6C2BD210FF0051DCC1 /* Setting.swift */; };
+		63931A6F2BD2114F0051DCC1 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63931A6E2BD2114F0051DCC1 /* License.swift */; };
+		63931A712BD213980051DCC1 /* AboutCYC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63931A702BD213980051DCC1 /* AboutCYC.swift */; };
+		63931A732BD213A30051DCC1 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63931A722BD213A30051DCC1 /* NotificationView.swift */; };
+		63931A752BD213AF0051DCC1 /* LicenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63931A742BD213AF0051DCC1 /* LicenseView.swift */; };
+		63931A772BD21A280051DCC1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63931A762BD21A280051DCC1 /* Person.swift */; };
 		63AB62EA2BB693EE001DFFFF /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62E92BB693EE001DFFFF /* Onboarding.swift */; };
 		63AB62ED2BB9C7DB001DFFFF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */; };
 		63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EE2BC1A65F001DFFFF /* User.swift */; };
@@ -47,7 +53,6 @@
 		63FA82032BB3E906006C136D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA82022BB3E906006C136D /* MainView.swift */; };
 		63FA82052BB3E90E006C136D /* MainFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA82042BB3E90E006C136D /* MainFeature.swift */; };
 		63FA82072BB3E91B006C136D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA82062BB3E91B006C136D /* LoginView.swift */; };
-		63FA82092BB3E924006C136D /* LoginFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA82082BB3E924006C136D /* LoginFeature.swift */; };
 		63FA820B2BB3E92E006C136D /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA820A2BB3E92E006C136D /* TodoView.swift */; };
 		63FA820D2BB3E936006C136D /* TodoFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA820C2BB3E936006C136D /* TodoFeature.swift */; };
 		63FA820F2BB3E93E006C136D /* CommitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA820E2BB3E93E006C136D /* CommitView.swift */; };
@@ -92,6 +97,12 @@
 		637380FB2BB28FF2006FD52C /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		637380FD2BB2909D006FD52C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		637380FF2BB291EF006FD52C /* CYC-TCA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CYC-TCA-Info.plist"; sourceTree = SOURCE_ROOT; };
+		63931A6C2BD210FF0051DCC1 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		63931A6E2BD2114F0051DCC1 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
+		63931A702BD213980051DCC1 /* AboutCYC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCYC.swift; sourceTree = "<group>"; };
+		63931A722BD213A30051DCC1 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		63931A742BD213AF0051DCC1 /* LicenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseView.swift; sourceTree = "<group>"; };
+		63931A762BD21A280051DCC1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		63AB62E92BB693EE001DFFFF /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		63AB62EE2BC1A65F001DFFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -116,7 +127,6 @@
 		63FA82022BB3E906006C136D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		63FA82042BB3E90E006C136D /* MainFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeature.swift; sourceTree = "<group>"; };
 		63FA82062BB3E91B006C136D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		63FA82082BB3E924006C136D /* LoginFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFeature.swift; sourceTree = "<group>"; };
 		63FA820A2BB3E92E006C136D /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		63FA820C2BB3E936006C136D /* TodoFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFeature.swift; sourceTree = "<group>"; };
 		63FA820E2BB3E93E006C136D /* CommitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitView.swift; sourceTree = "<group>"; };
@@ -160,6 +170,9 @@
 		6373809F2BB284E9006FD52C /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				63931A702BD213980051DCC1 /* AboutCYC.swift */,
+				63931A722BD213A30051DCC1 /* NotificationView.swift */,
+				63931A742BD213AF0051DCC1 /* LicenseView.swift */,
 				63FA82162BB3E95E006C136D /* SettingView.swift */,
 				63FA82182BB3E966006C136D /* SettingFeature.swift */,
 			);
@@ -198,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				63FA82062BB3E91B006C136D /* LoginView.swift */,
-				63FA82082BB3E924006C136D /* LoginFeature.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -331,6 +343,9 @@
 			isa = PBXGroup;
 			children = (
 				63AB62EE2BC1A65F001DFFFF /* User.swift */,
+				63931A6C2BD210FF0051DCC1 /* Setting.swift */,
+				63931A6E2BD2114F0051DCC1 /* License.swift */,
+				63931A762BD21A280051DCC1 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,25 +548,30 @@
 				63FA820F2BB3E93E006C136D /* CommitView.swift in Sources */,
 				63AB62ED2BB9C7DB001DFFFF /* LoginManager.swift in Sources */,
 				637380FE2BB2909D006FD52C /* AppDelegate.swift in Sources */,
+				63931A712BD213980051DCC1 /* AboutCYC.swift in Sources */,
 				63FA82152BB3E957006C136D /* ProgressFeature.swift in Sources */,
 				637380DD2BB28CB2006FD52C /* Spacing+Extension.swift in Sources */,
 				63CAD9072BB151C1007E0B69 /* ContentView.swift in Sources */,
 				63FA820B2BB3E92E006C136D /* TodoView.swift in Sources */,
 				63CAD9532BB15645007E0B69 /* NavigationController+Extension.swift in Sources */,
 				63CAD9052BB151C1007E0B69 /* CYC_TCAApp.swift in Sources */,
+				63931A772BD21A280051DCC1 /* Person.swift in Sources */,
 				63FA82052BB3E90E006C136D /* MainFeature.swift in Sources */,
 				63FA820D2BB3E936006C136D /* TodoFeature.swift in Sources */,
 				63CAD94F2BB155B1007E0B69 /* UserDefaults+Extension.swift in Sources */,
 				63CAD9512BB155EF007E0B69 /* Color+Extension.swift in Sources */,
+				63931A6F2BD2114F0051DCC1 /* License.swift in Sources */,
+				63931A732BD213A30051DCC1 /* NotificationView.swift in Sources */,
 				637380FC2BB28FF2006FD52C /* UIButton.swift in Sources */,
 				63AB62F52BCBA599001DFFFF /* ProgressBarView.swift in Sources */,
 				637380BE2BB28624006FD52C /* Font+Extension.swift in Sources */,
-				63FA82092BB3E924006C136D /* LoginFeature.swift in Sources */,
 				63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */,
 				63AB62EA2BB693EE001DFFFF /* Onboarding.swift in Sources */,
+				63931A752BD213AF0051DCC1 /* LicenseView.swift in Sources */,
 				63CAD9572BB15734007E0B69 /* Keys.swift in Sources */,
 				63FA82072BB3E91B006C136D /* LoginView.swift in Sources */,
 				63FA82172BB3E95E006C136D /* SettingView.swift in Sources */,
+				63931A6D2BD210FF0051DCC1 /* Setting.swift in Sources */,
 				637380FA2BB28FDC006FD52C /* DLMode.swift in Sources */,
 				63FA82132BB3E94D006C136D /* ProgressView.swift in Sources */,
 				63FA82192BB3E966006C136D /* SettingFeature.swift in Sources */,
