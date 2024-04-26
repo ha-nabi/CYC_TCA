@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LicenseModel: Identifiable {
+struct LicenseModel: Equatable ,Identifiable {
     let id = UUID()
     let text: String
     let destination: String

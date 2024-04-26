@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PersonGridView: View {
-    
     var person: Person
     
     var body: some View {

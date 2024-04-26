@@ -28,7 +28,7 @@ struct SettingView: View {
                         SettingCell(imageName: "bells", settingTittle: "알림설정")
                     }
                     
-                    NavigationLink(destination: LicenseView()) {
+                    NavigationLink(destination: LicenseView(store: store)) {
                         SettingCell(imageName: "docs", settingTittle: "라이센스")
                     }
                     
