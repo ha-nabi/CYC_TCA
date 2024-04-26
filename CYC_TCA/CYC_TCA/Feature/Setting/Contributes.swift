@@ -1,13 +1,13 @@
 //
-//  AboutCYC.swift
+//  Contributes.swift
 //  CYC_TCA
 //
-//  Created by 강치우 on 4/19/24.
+//  Created by 강치우 on 4/26/24.
 //
 
 import SwiftUI
 
-struct AboutCYC: View {
+struct Contributes: View {
     @Environment(\.dismiss) var dismiss
     
     @State private var columns = Array(repeating: GridItem(.flexible(), spacing: 15), count: 2)
@@ -19,59 +19,42 @@ struct AboutCYC: View {
                 // MARK: - Intro
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading, spacing: 8) {
+                        
                         Image("logo1")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 55)
                         
-                        Text("CYC는 어떤 앱인가요?")
+                        Text("도움을 주신 분들")
                             .font(.pretendardBold_23)
                             .padding(.vertical, 10)
                         
-                        Text("CYC(Check Your Commit)은 주인장이 커밋을 자주 잊곤 해서 다른 사람들도 이런 불편함이 있지 않을까? 해서 만들어진 앱이에요")
+                        Text("저희와 같은 팀은 아니였지만 앱 제작에 아무런 대가 없이 도움을 주신 분들을 위해 감사한 마음으로 만들어 봤어요")
                             .font(.pretendardSemiBold_15)
                             .lineSpacing(3)
                             .padding(.bottom, 15)
                         
-                        Text("커밋 할 때 까지 여러분들을 귀찮게 할 수도 있어요\n하지만 꾸준함을 보여주기 위해 같이 1일 1커밋 같이 해봐요!")
+                        Text("언제 어디서든 항상 행복하고 성공하길 바라며 CYC 제작에 도움을 주셔서 감사합니다")
                             .font(.pretendardSemiBold_15)
                             .lineSpacing(3)
                     }
                     .padding(.horizontal, 20)
-                    .padding(.bottom, 30)
-                    
-                    // MARK: - With
-                    VStack(alignment: .leading, spacing: 0) {
-                        HStack {
-                            Text("만든 사람들")
-                                .font(.pretendardBold_23)
-                                .padding(.horizontal, 20)
-                            
-                            Spacer()
-                            
-                            NavigationLink(destination: Contributes()) {
-                                Text("더보기")
-                                    .font(.pretendardSemiBold_15)
-                                    .foregroundStyle(.base)
-                                    .padding(.trailing, 25)
-                            }
+                    // MARK: - Contribute
+                    LazyVGrid(columns: columns, spacing: 15) {
+                        ForEach(0..<ContributeData.count, id: \.self) { person in
+                            PersonGridView(person: ContributeData[person])
                         }
-                        
-                        LazyVGrid(columns: columns, spacing: 15) {
-                            ForEach(0..<PersonData.count, id: \.self) { person in
-                                PersonGridView(person: PersonData[person])
-                            }
-                        }
-                        .padding()
                     }
+                    .padding()
+                    .padding(.vertical)
                 }
                 .padding(.top, 5)
             }
             .scrollIndicators(.hidden)
         }
-        .navigationTitle("CYC에 대해서")
+        .navigationTitle("도움을 주신 분들")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button {

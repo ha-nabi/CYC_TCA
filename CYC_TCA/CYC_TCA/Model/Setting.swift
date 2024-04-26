@@ -11,7 +11,6 @@ struct Setting: Identifiable, Hashable {
     let id: UUID
     let name: String
     let imageName: String
-    let destination: () -> AnyView
     
     // MARK: - Equatable 프로토콜
     static func == (lhs: Setting, rhs: Setting) -> Bool {

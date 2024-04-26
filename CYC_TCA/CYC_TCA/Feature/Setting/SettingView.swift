@@ -9,9 +9,9 @@ import ComposableArchitecture
 import SwiftUI
 
 struct SettingView: View {
-    @Environment(\.dismiss) var dismiss
-    
     @AppStorage("isLoggedIn") var isloggedInVIew: Bool = true
+    
+    @Environment(\.dismiss) var dismiss
     
     @Bindable var store: StoreOf<SettingFeature>
     
@@ -20,21 +20,16 @@ struct SettingView: View {
             Color.bgColor.ignoresSafeArea(.all)
             ScrollView {
                 VStack(alignment: .leading) {
-                    ForEach(store.setting, id: \.self) { setting in
-                        NavigationLink(destination: setting.destination) {
-                            HStack {
-                                Image("\(setting.imageName)")
-                                    .resizable()
-                                    .frame(width: 24, height: 24)
-                                Text("\(setting.name)")
-                                    .font(.pretendardMedium_17)
-                                    .padding(.leading, 10)
-                                
-                            }
-                            .foregroundStyle(.base)
-                            .padding(.vertical, 8)
-                        }
-                        
+                    NavigationLink(destination: AboutCYC()) {
+                        SettingCell(imageName: "about", settingTittle: "CYC에 대해서")
+                    }
+                    
+                    NavigationLink(destination: NotificationView()) {
+                        SettingCell(imageName: "bells", settingTittle: "알림설정")
+                    }
+                    
+                    NavigationLink(destination: LicenseView()) {
+                        SettingCell(imageName: "docs", settingTittle: "라이센스")
                     }
                     
                     // MARK: - 로그아웃
@@ -95,9 +90,6 @@ struct SettingView: View {
                     }
                 }
             }
-        }
-        .onAppear {
-            store.send(.getSetting)
         }
     }
 }

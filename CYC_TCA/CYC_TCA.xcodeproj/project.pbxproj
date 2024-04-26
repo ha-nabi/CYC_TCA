@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6324B3802BDB92E500C45AB4 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B37F2BDB92E500C45AB4 /* SettingCell.swift */; };
+		6324B3822BDB94E200C45AB4 /* Contributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B3812BDB94E200C45AB4 /* Contributes.swift */; };
+		6324B3842BDB953500C45AB4 /* PersonGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B3832BDB953500C45AB4 /* PersonGridView.swift */; };
 		637380B42BB28610006FD52C /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 637380AB2BB28610006FD52C /* Pretendard-ExtraBold.otf */; };
 		637380B52BB28610006FD52C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 637380AC2BB28610006FD52C /* Pretendard-Thin.otf */; };
 		637380B62BB28610006FD52C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 637380AD2BB28610006FD52C /* Pretendard-Black.otf */; };
@@ -81,6 +84,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6324B37F2BDB92E500C45AB4 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		6324B3812BDB94E200C45AB4 /* Contributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributes.swift; sourceTree = "<group>"; };
+		6324B3832BDB953500C45AB4 /* PersonGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonGridView.swift; sourceTree = "<group>"; };
 		637380AB2BB28610006FD52C /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		637380AC2BB28610006FD52C /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		637380AD2BB28610006FD52C /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -170,10 +176,13 @@
 		6373809F2BB284E9006FD52C /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				6324B3832BDB953500C45AB4 /* PersonGridView.swift */,
+				6324B3812BDB94E200C45AB4 /* Contributes.swift */,
 				63931A702BD213980051DCC1 /* AboutCYC.swift */,
 				63931A722BD213A30051DCC1 /* NotificationView.swift */,
 				63931A742BD213AF0051DCC1 /* LicenseView.swift */,
 				63FA82162BB3E95E006C136D /* SettingView.swift */,
+				6324B37F2BDB92E500C45AB4 /* SettingCell.swift */,
 				63FA82182BB3E966006C136D /* SettingFeature.swift */,
 			);
 			path = Setting;
@@ -551,6 +560,7 @@
 				63931A712BD213980051DCC1 /* AboutCYC.swift in Sources */,
 				63FA82152BB3E957006C136D /* ProgressFeature.swift in Sources */,
 				637380DD2BB28CB2006FD52C /* Spacing+Extension.swift in Sources */,
+				6324B3822BDB94E200C45AB4 /* Contributes.swift in Sources */,
 				63CAD9072BB151C1007E0B69 /* ContentView.swift in Sources */,
 				63FA820B2BB3E92E006C136D /* TodoView.swift in Sources */,
 				63CAD9532BB15645007E0B69 /* NavigationController+Extension.swift in Sources */,
@@ -559,12 +569,14 @@
 				63FA82052BB3E90E006C136D /* MainFeature.swift in Sources */,
 				63FA820D2BB3E936006C136D /* TodoFeature.swift in Sources */,
 				63CAD94F2BB155B1007E0B69 /* UserDefaults+Extension.swift in Sources */,
+				6324B3802BDB92E500C45AB4 /* SettingCell.swift in Sources */,
 				63CAD9512BB155EF007E0B69 /* Color+Extension.swift in Sources */,
 				63931A6F2BD2114F0051DCC1 /* License.swift in Sources */,
 				63931A732BD213A30051DCC1 /* NotificationView.swift in Sources */,
 				637380FC2BB28FF2006FD52C /* UIButton.swift in Sources */,
 				63AB62F52BCBA599001DFFFF /* ProgressBarView.swift in Sources */,
 				637380BE2BB28624006FD52C /* Font+Extension.swift in Sources */,
+				6324B3842BDB953500C45AB4 /* PersonGridView.swift in Sources */,
 				63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */,
 				63AB62EA2BB693EE001DFFFF /* Onboarding.swift in Sources */,
 				63931A752BD213AF0051DCC1 /* LicenseView.swift in Sources */,
