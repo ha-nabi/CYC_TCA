@@ -69,7 +69,7 @@ struct DLMode: View {
                     }
                 }
                 .padding(.horizontal, 8)
-                .preferredColorScheme(AppearanceMode(rawValue: store.appearanceMode.rawValue)?.colorScheme)
+                .preferredColorScheme(store.appearanceMode.colorScheme)
                 
             }
             .offset(y: store.isShowingDLModeButton ? 300 : -30)
