@@ -5,6 +5,7 @@
 //  Created by 강치우 on 3/26/24.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 enum AppearanceMode: Int {
@@ -13,19 +14,19 @@ enum AppearanceMode: Int {
     case Dark = 2
     
     var colorScheme: ColorScheme? {
-            switch self {
-            case .System:
-                return .none
-            case .Light:
-                return .light
-            case .Dark:
-                return .dark
-            }
+        switch self {
+        case .System:
+            return .none
+        case .Light:
+            return .light
+        case .Dark:
+            return .dark
         }
+    }
 }
 
 struct UIButton: View {
-    @Binding var currentMode: AppearanceMode
+    @Bindable var store: StoreOf<MainFeature>
     
     var mode: AppearanceMode
     var Rbg: Color
@@ -53,7 +54,7 @@ struct UIButton: View {
             .foregroundStyle(Rbgi)
             .padding(8)
             .overlay {
-                if currentMode == mode {
+                if store.appearanceMode == mode {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(lineWidth: 2)
                         .padding(-3)
@@ -69,8 +70,7 @@ struct UIButton: View {
                 .background(.bg, in: RoundedRectangle(cornerRadius: 10))
             
         }
-        .scaleEffect(currentMode == mode ? 1.0 : 0.9)
-        .animation(.default, value: currentMode)
+        .scaleEffect(store.appearanceMode == mode ? 1.0 : 0.9)
+        .animation(.default, value: store.appearanceMode)
     }
 }
-

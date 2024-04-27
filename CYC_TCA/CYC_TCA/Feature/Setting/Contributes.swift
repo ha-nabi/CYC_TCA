@@ -19,7 +19,6 @@ struct Contributes: View {
                 // MARK: - Intro
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading, spacing: 8) {
-                        
                         Image("logo1")
                             .resizable()
                             .scaledToFit()

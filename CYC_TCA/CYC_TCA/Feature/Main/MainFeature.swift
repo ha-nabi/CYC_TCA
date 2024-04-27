@@ -13,11 +13,15 @@ struct MainFeature {
     @ObservableState
     struct State {
         @Presents var setting: SettingFeature.State?
+        var isShowingDLModeButton: Bool = true
+        var appearanceMode: AppearanceMode = .System
     }
     
     enum Action {
         case setting(PresentationAction<SettingFeature.Action>)
+        case setMode(AppearanceMode)
         case settingButtonTapped
+        case modebuttonTapped
     }
     
     var body: some ReducerOf<Self> {
@@ -27,7 +31,15 @@ struct MainFeature {
                 state.setting = SettingFeature.State()
                 return .none
                 
+            case let .setMode(mode):
+                state.appearanceMode = mode
+                return .none
+                
             case .setting(_):
+                return .none
+                
+            case .modebuttonTapped:
+                state.isShowingDLModeButton.toggle()
                 return .none
             }
         }

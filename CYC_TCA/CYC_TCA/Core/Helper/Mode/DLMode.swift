@@ -5,11 +5,11 @@
 //  Created by 강치우 on 3/26/24.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct DLMode: View {
-    @Binding var appearanceMode: AppearanceMode
-    @Binding var show: Bool
+    @Bindable var store: StoreOf<MainFeature>
     
     var body: some View {
         ZStack {
@@ -38,24 +38,24 @@ struct DLMode: View {
                             
                             // Light Mode
                             Button {
-                                appearanceMode = .Light
+                                store.send(.setMode(.Light))
                             } label: {
-                                UIButton(currentMode: $appearanceMode, mode: .Light, Rbg: Color(.systemGray), Rbgi: Color(.systemGray3), ibg: .white)
+                                UIButton(store: store, mode: .Light, Rbg: Color(.systemGray), Rbgi: Color(.systemGray3), ibg: .white)
                             }
                             .tint(.primary)
                             
                             // Dark Mode
                             Button {
-                                appearanceMode = .Dark
+                                store.send(.setMode(.Dark))
                             } label: {
-                                UIButton(currentMode: $appearanceMode, mode: .Dark, Rbg: Color(.systemGray), Rbgi: Color(.systemGray3), ibg: .black)
+                                UIButton(store: store, mode: .Dark, Rbg: Color(.systemGray), Rbgi: Color(.systemGray3), ibg: .black)
                             }
                             .tint(.primary)
                             
                             // System Mode
                             ZStack {
-                                UIButton(currentMode: $appearanceMode, mode: .System, Rbg: Color(.systemGray), Rbgi: Color(.systemGray4), ibg: .white)
-                                UIButton(currentMode: $appearanceMode, mode: .System, Rbg: Color(.systemGray), Rbgi: Color(.systemGray3), ibg: .black)
+                                UIButton(store: store, mode: .System, Rbg: Color(.systemGray), Rbgi: Color(.systemGray4), ibg: .white)
+                                UIButton(store: store, mode: .System, Rbg: Color(.systemGray), Rbgi: Color(.systemGray3), ibg: .black)
                                     .mask {
                                         RoundedRectangle(cornerRadius: 10)
                                             .frame(width: 50, height: 200)
@@ -63,26 +63,19 @@ struct DLMode: View {
                                     }
                             }
                             .onTapGesture {
-                                appearanceMode = .System
+                                store.send(.setMode(.System))
                             }
                         }
                     }
                 }
                 .padding(.horizontal, 8)
-                .preferredColorScheme(AppearanceMode(rawValue: appearanceMode.rawValue)?.colorScheme)
+                .preferredColorScheme(AppearanceMode(rawValue: store.appearanceMode.rawValue)?.colorScheme)
                 
             }
-            .offset(y: show ? 300 : -30)
+            .offset(y: store.isShowingDLModeButton ? 300 : -30)
         }
         .onTapGesture {
-            show.toggle()
+            store.send(.modebuttonTapped)
         }
     }
 }
-
-#Preview {
-    DLMode(appearanceMode: .constant(.Dark), show: .constant(false))
-}
-
-
-

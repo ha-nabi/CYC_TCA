@@ -6,7 +6,6 @@
 //
 
 import ComposableArchitecture
-
 import SwiftUI
 
 struct MainView: View {
@@ -30,7 +29,7 @@ struct MainView: View {
                         Spacer()
                         
                         Button {
-                            // MARK: DLMODE
+                            store.send(.modebuttonTapped)
                         } label: {
                             Image(systemName: "lamp.table.fill")
                                 .resizable()
@@ -70,6 +69,8 @@ struct MainView: View {
                     }
                     .scrollIndicators(.hidden)
                 }
+                
+                DLMode(store: store)
             }
             .navigationDestination (item: $store.scope(state: \.setting, action: \.setting)) { settingStore in
                 SettingView(store: settingStore)
