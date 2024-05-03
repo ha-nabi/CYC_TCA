@@ -10,6 +10,8 @@
 		6324B3802BDB92E500C45AB4 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B37F2BDB92E500C45AB4 /* SettingCell.swift */; };
 		6324B3822BDB94E200C45AB4 /* Contributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B3812BDB94E200C45AB4 /* Contributes.swift */; };
 		6324B3842BDB953500C45AB4 /* PersonGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B3832BDB953500C45AB4 /* PersonGridView.swift */; };
+		6324B3962BE389BC00C45AB4 /* GrassColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B3952BE389BC00C45AB4 /* GrassColor.swift */; };
+		6324B3982BE38A6900C45AB4 /* ColorModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6324B3972BE38A6900C45AB4 /* ColorModalView.swift */; };
 		637380B42BB28610006FD52C /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 637380AB2BB28610006FD52C /* Pretendard-ExtraBold.otf */; };
 		637380B52BB28610006FD52C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 637380AC2BB28610006FD52C /* Pretendard-Thin.otf */; };
 		637380B62BB28610006FD52C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 637380AD2BB28610006FD52C /* Pretendard-Black.otf */; };
@@ -35,6 +37,7 @@
 		63AB62ED2BB9C7DB001DFFFF /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */; };
 		63AB62EF2BC1A65F001DFFFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62EE2BC1A65F001DFFFF /* User.swift */; };
 		63AB62F52BCBA599001DFFFF /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AB62F42BCBA599001DFFFF /* ProgressBarView.swift */; };
+		63AC6B792BE5892F004EC50C /* ProgressTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC6B782BE5892F004EC50C /* ProgressTextView.swift */; };
 		63CAD9052BB151C1007E0B69 /* CYC_TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9042BB151C1007E0B69 /* CYC_TCAApp.swift */; };
 		63CAD9072BB151C1007E0B69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD9062BB151C1007E0B69 /* ContentView.swift */; };
 		63CAD9092BB151C2007E0B69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63CAD9082BB151C2007E0B69 /* Assets.xcassets */; };
@@ -87,6 +90,8 @@
 		6324B37F2BDB92E500C45AB4 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		6324B3812BDB94E200C45AB4 /* Contributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributes.swift; sourceTree = "<group>"; };
 		6324B3832BDB953500C45AB4 /* PersonGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonGridView.swift; sourceTree = "<group>"; };
+		6324B3952BE389BC00C45AB4 /* GrassColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrassColor.swift; sourceTree = "<group>"; };
+		6324B3972BE38A6900C45AB4 /* ColorModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModalView.swift; sourceTree = "<group>"; };
 		637380AB2BB28610006FD52C /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		637380AC2BB28610006FD52C /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		637380AD2BB28610006FD52C /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 		63AB62EC2BB9C7DA001DFFFF /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		63AB62EE2BC1A65F001DFFFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		63AB62F42BCBA599001DFFFF /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		63AC6B782BE5892F004EC50C /* ProgressTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressTextView.swift; sourceTree = "<group>"; };
 		63CAD9012BB151C1007E0B69 /* CYC_TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYC_TCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CAD9042BB151C1007E0B69 /* CYC_TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CYC_TCAApp.swift; sourceTree = "<group>"; };
 		63CAD9062BB151C1007E0B69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 			children = (
 				63FA82122BB3E94D006C136D /* ProgressView.swift */,
 				63AB62F42BCBA599001DFFFF /* ProgressBarView.swift */,
+				63AC6B782BE5892F004EC50C /* ProgressTextView.swift */,
 				63FA82142BB3E957006C136D /* ProgressFeature.swift */,
 			);
 			path = Progress;
@@ -202,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				63FA820E2BB3E93E006C136D /* CommitView.swift */,
+				6324B3972BE38A6900C45AB4 /* ColorModalView.swift */,
 				63FA82102BB3E945006C136D /* CommitFeature.swift */,
 			);
 			path = Commit;
@@ -355,6 +363,7 @@
 				63931A6C2BD210FF0051DCC1 /* Setting.swift */,
 				63931A6E2BD2114F0051DCC1 /* License.swift */,
 				63931A762BD21A280051DCC1 /* Person.swift */,
+				6324B3952BE389BC00C45AB4 /* GrassColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				637380F72BB28F6F006FD52C /* LocalNotificationHelper.swift in Sources */,
+				6324B3982BE38A6900C45AB4 /* ColorModalView.swift in Sources */,
 				63FA82032BB3E906006C136D /* MainView.swift in Sources */,
 				63FA82112BB3E945006C136D /* CommitFeature.swift in Sources */,
 				63CAD94D2BB15583007E0B69 /* Keboard+Extension.swift in Sources */,
@@ -571,7 +581,9 @@
 				63CAD94F2BB155B1007E0B69 /* UserDefaults+Extension.swift in Sources */,
 				6324B3802BDB92E500C45AB4 /* SettingCell.swift in Sources */,
 				63CAD9512BB155EF007E0B69 /* Color+Extension.swift in Sources */,
+				63AC6B792BE5892F004EC50C /* ProgressTextView.swift in Sources */,
 				63931A6F2BD2114F0051DCC1 /* License.swift in Sources */,
+				6324B3962BE389BC00C45AB4 /* GrassColor.swift in Sources */,
 				63931A732BD213A30051DCC1 /* NotificationView.swift in Sources */,
 				637380FC2BB28FF2006FD52C /* UIButton.swift in Sources */,
 				63AB62F52BCBA599001DFFFF /* ProgressBarView.swift in Sources */,

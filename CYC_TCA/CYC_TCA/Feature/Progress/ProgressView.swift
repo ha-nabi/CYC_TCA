@@ -5,18 +5,21 @@
 //  Created by 강치우 on 3/27/24.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct ProgressView: View {
+    @Bindable var store: StoreOf<ProgressFeature>
+    
     var body: some View {
         VStack {
-            //            ProgressTextView()
+            ProgressTextView()
             HStack(alignment: .center) {
                 ProgressBarView()
-                //                    .onAppear {
-                //                        progressModel.progress = loginModel.commitDay
-                //                        ModalView().moveDinosaur()
-                //                    }
+                    .onAppear {
+                        store.send(.updateProgress)
+//                        ModalView().moveDinosaur()
+                    }
                 
                 // pink dinosaur button view
                 ZStack(alignment: .top) {
@@ -24,7 +27,7 @@ struct ProgressView: View {
                         // progressModel.showSheet.toggle()
                     } label: {
                         VStack {
-                            Text("D-123")
+                            Text("D-\(store.goal)")
                                 .font(.pretendardSemiBold_12)
                                 .foregroundStyle(Color.baseColor)
                             
@@ -48,8 +51,4 @@ struct ProgressView: View {
         .padding(.top, 20)
         .background(Color.bgColor)
     }
-}
-
-#Preview {
-    ProgressView()
 }

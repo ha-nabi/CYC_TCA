@@ -35,7 +35,6 @@ struct DLMode: View {
                         .padding(.horizontal, 23)
                         
                         HStack(spacing: 40) {
-                            
                             // Light Mode
                             Button {
                                 store.send(.setMode(.Light))
@@ -72,7 +71,7 @@ struct DLMode: View {
                 .preferredColorScheme(store.appearanceMode.colorScheme)
                 
             }
-            .offset(y: store.isShowingDLModeButton ? 300 : -30)
+            .offset(y: store.isShowingDLModeButton ? 350 : 0)
         }
         .onTapGesture {
             store.send(.modebuttonTapped)

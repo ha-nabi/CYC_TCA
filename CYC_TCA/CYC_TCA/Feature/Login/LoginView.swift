@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @AppStorage("isLoggedIn") var isloggedInVIew: Bool = false
+    @AppStorage("isLoggedIn") var isloggedInView: Bool = false
 
     var body: some View {
         ZStack {
@@ -37,7 +37,7 @@ struct LoginView: View {
                         let success = await LoginManager.shared.handleCodeFromURL(url)
                             if success{
                                 await LoginManager.shared.get_access_token()
-                                isloggedInVIew = true
+                                isloggedInView = true
                             }
                         }
                 })

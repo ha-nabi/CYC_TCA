@@ -10,12 +10,15 @@ import ComposableArchitecture
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("isLoggedIn") var isloggedInVIew: Bool = false
+    @AppStorage("isLoggedIn") var isloggedInView: Bool = false
     
     var body: some View {
         ZStack {
-            if isloggedInVIew {
-                MainView(store: Store(initialState: MainFeature.State()) {
+            if isloggedInView {
+                MainView(store: Store(initialState: MainFeature.State(
+                    commit: CommitFeature.State(),
+                    progress: ProgressFeature.State())
+                ) {
                     MainFeature()
                 })
             } else {

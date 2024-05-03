@@ -106,47 +106,45 @@ class LoginManager: ObservableObject {
         }
     }
     
-//    func getCommitData() {
-//        if let url = URL(string: "http://github.com/users/\(self.userLogin!)/contributions") {
-//            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//                if let error = error {
-//                    print("Error fetching data: \(error.localizedDescription)")
-//                    return
-//                }
-//                if let data = data, let html = String(data: data, encoding: .utf8) {
-//                    do {
-//                        let parsedHtml = try SwiftSoup.parse(html)
-//                        let dailyContribution = try parsedHtml.select("td")
-//                        
-//                        let validCommits = dailyContribution.compactMap { element -> (String, String)? in
-//                            guard
-//                                let dateString = try? element.attr("data-date"),
-//                                let levelString = try? element.attr("data-level"),
-//                                !dateString.isEmpty
-//                            else { return nil }
-//                            
-//                            return (dateString, levelString)
-//                        }
-//                        // 준비되면 바로 연속일수 뿌리기, 공룡 움직이기 -> flag로 MainView에서 바로 처리
-//                        DispatchQueue.main.async {
-//                            if self.dataToDictionary(validCommits){
-//                                self.commitDay = self.findConsecutiveDates(withData: self.testCase)
-//                                ModalView().moveDinosaur()
-//                            }
-//                        }
-//                    } catch {
-//                        print("Error parsing HTML: \(error.localizedDescription)")
-//                    }
-//                } else {
-//                    print("No data received")
-//                }
-//            }
-//            task.resume()
-//            
-//        } else {
-//            print("Invalid URL")
-//        }
-//    }
+    func getCommitData() async {
+        guard let userLogin = userLogin, !userLogin.isEmpty,
+              let url = URL(string: "http://github.com/users/\(userLogin)/contributions") else {
+            print("Invalid user login or URL.")
+            return
+        }
+
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let html = String(data: data, encoding: .utf8) else {
+                print("Failed to decode data.")
+                return
+            }
+            
+            let validCommits = try parseCommitData(from: html)
+            if dataToDictionary(validCommits) {
+                self.commitDay = findConsecutiveDates(withData: self.testCase)
+                // movedinosour 코드 넣어야함
+            }
+        } catch {
+            print("Network or parsing error: \(error.localizedDescription)")
+        }
+    }
+
+    private func parseCommitData(from html: String) throws -> [(String, String)] {
+        let parsedHtml = try SwiftSoup.parse(html)
+        let dailyContribution = try parsedHtml.select("td")
+        return dailyContribution.compactMap { element -> (String, String)? in
+            guard
+                let dateString = try? element.attr("data-date"),
+                let levelString = try? element.attr("data-level"),
+                !dateString.isEmpty
+            else {
+                return nil
+            }
+            
+            return (dateString, levelString)
+        }
+    }
     
     func dataToDictionary(_ data: [(String, String)]) -> Bool {
         let dateFormatter = DateFormatter()

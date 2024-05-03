@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 struct SettingView: View {
-    @AppStorage("isLoggedIn") var isloggedInVIew: Bool = true
+    @AppStorage("isLoggedIn") var isloggedInView: Bool = true
     
     @Environment(\.dismiss) var dismiss
     
@@ -50,11 +50,12 @@ struct SettingView: View {
                     }
                     .alert("정말 로그아웃 하시겠어요?", isPresented: $store.isShowingAlert.sending(\.showingAlert)) {
                         Button("로그아웃", role: .destructive) {
-                            
+                            LoginManager.shared.logout()
+                            isloggedInView = false
                         }
                         
                         Button("닫기", role: .cancel) {
-                            
+                            dismiss()
                         }
                     }
                 }
